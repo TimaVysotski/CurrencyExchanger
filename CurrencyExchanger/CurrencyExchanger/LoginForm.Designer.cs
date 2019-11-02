@@ -1,6 +1,6 @@
 ﻿namespace CurrencyExchanger
 {
-    partial class Form1
+    partial class loginForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -30,9 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.adminButton = new System.Windows.Forms.Button();
+            this.adminLabel = new System.Windows.Forms.Label();
+            this.loginButton = new System.Windows.Forms.Button();
+            this.surnameTextBox = new System.Windows.Forms.TextBox();
+            this.surnameLabel = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.authorizationLabel = new System.Windows.Forms.Label();
@@ -54,10 +57,13 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.Controls.Add(this.adminButton);
+            this.panel3.Controls.Add(this.adminLabel);
+            this.panel3.Controls.Add(this.loginButton);
+            this.panel3.Controls.Add(this.surnameTextBox);
+            this.panel3.Controls.Add(this.surnameLabel);
+            this.panel3.Controls.Add(this.nameTextBox);
             this.panel3.Controls.Add(this.nameLabel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 81);
@@ -65,32 +71,66 @@
             this.panel3.Size = new System.Drawing.Size(351, 339);
             this.panel3.TabIndex = 1;
             // 
-            // textBox2
+            // adminButton
             // 
-            this.textBox2.Location = new System.Drawing.Point(107, 78);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(232, 25);
-            this.textBox2.TabIndex = 3;
+            this.adminButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.adminButton.Location = new System.Drawing.Point(116, 288);
+            this.adminButton.Name = "adminButton";
+            this.adminButton.Size = new System.Drawing.Size(123, 39);
+            this.adminButton.TabIndex = 6;
+            this.adminButton.Text = "Admin";
+            this.adminButton.UseVisualStyleBackColor = false;
+            this.adminButton.Click += new System.EventHandler(this.adminButton_Click);
+            this.adminButton.MouseEnter += new System.EventHandler(this.adminButton_MouseEnter);
+            this.adminButton.MouseLeave += new System.EventHandler(this.adminButton_MouseLeave);
             // 
-            // label1
+            // adminLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Surname";
-           
+            this.adminLabel.AutoSize = true;
+            this.adminLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.adminLabel.Location = new System.Drawing.Point(12, 244);
+            this.adminLabel.Name = "adminLabel";
+            this.adminLabel.Size = new System.Drawing.Size(333, 18);
+            this.adminLabel.TabIndex = 5;
+            this.adminLabel.Text = "If you are an administrator, click the admin button.";
             // 
-            // textBox1
+            // loginButton
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 32);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 25);
-            this.textBox1.TabIndex = 1;
+            this.loginButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.loginButton.Location = new System.Drawing.Point(116, 131);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(123, 38);
+            this.loginButton.TabIndex = 4;
+            this.loginButton.Text = "Login";
+            this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            this.loginButton.MouseEnter += new System.EventHandler(this.loginButton_MouseEnter);
+            // 
+            // surnameTextBox
+            // 
+            this.surnameTextBox.Location = new System.Drawing.Point(116, 78);
+            this.surnameTextBox.Multiline = true;
+            this.surnameTextBox.Name = "surnameTextBox";
+            this.surnameTextBox.Size = new System.Drawing.Size(223, 25);
+            this.surnameTextBox.TabIndex = 3;
+            // 
+            // surnameLabel
+            // 
+            this.surnameLabel.AutoSize = true;
+            this.surnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.surnameLabel.Location = new System.Drawing.Point(12, 78);
+            this.surnameLabel.Name = "surnameLabel";
+            this.surnameLabel.Size = new System.Drawing.Size(104, 25);
+            this.surnameLabel.TabIndex = 2;
+            this.surnameLabel.Text = "Surname:";
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(116, 32);
+            this.nameTextBox.Multiline = true;
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(223, 25);
+            this.nameTextBox.TabIndex = 1;
             // 
             // nameLabel
             // 
@@ -98,9 +138,9 @@
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameLabel.Location = new System.Drawing.Point(12, 32);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(68, 25);
+            this.nameLabel.Size = new System.Drawing.Size(74, 25);
             this.nameLabel.TabIndex = 0;
-            this.nameLabel.Text = "Name";
+            this.nameLabel.Text = "Name:";
             // 
             // panel2
             // 
@@ -123,14 +163,14 @@
             this.authorizationLabel.Text = "Authorization";
             this.authorizationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 420);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "loginForm";
+            this.Text = "Login Form";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -143,12 +183,15 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox surnameTextBox;
+        private System.Windows.Forms.Label surnameLabel;
+        private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label authorizationLabel;
+        private System.Windows.Forms.Button adminButton;
+        private System.Windows.Forms.Label adminLabel;
+        private System.Windows.Forms.Button loginButton;
     }
 }
 
