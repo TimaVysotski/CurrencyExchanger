@@ -52,6 +52,18 @@
     <Compile Include="ExchangerForm.Designer.cs">
       <DependentUpon>ExchangerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryForm.Designer.cs">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayCheckForm.Designer.cs">
+      <DependentUpon>PayCheckForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,8 +84,14 @@
     <EmbeddedResource Include="ExchangerForm.resx">
       <DependentUpon>ExchangerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HistoryForm.resx">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCheckForm.resx">
+      <DependentUpon>PayCheckForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
