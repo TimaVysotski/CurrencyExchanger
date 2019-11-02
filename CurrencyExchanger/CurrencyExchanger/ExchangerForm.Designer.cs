@@ -29,13 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buyAmountLabel = new System.Windows.Forms.Label();
+            this.buyTextBox = new System.Windows.Forms.TextBox();
             this.buyCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.buyLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.sellLabel = new System.Windows.Forms.Label();
             this.sellCheckedListBox = new System.Windows.Forms.CheckedListBox();
-            this.buyTextBox = new System.Windows.Forms.TextBox();
-            this.buyAmountLabel = new System.Windows.Forms.Label();
+            this.sellLabel = new System.Windows.Forms.Label();
+            this.sellAmountLabel = new System.Windows.Forms.Label();
+            this.sellTextBox = new System.Windows.Forms.TextBox();
+            this.BuyButton = new System.Windows.Forms.Button();
+            this.sellButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -43,6 +51,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.BuyButton);
             this.panel1.Controls.Add(this.buyAmountLabel);
             this.panel1.Controls.Add(this.buyTextBox);
             this.panel1.Controls.Add(this.buyCheckedListBox);
@@ -50,8 +61,25 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(290, 213);
+            this.panel1.Size = new System.Drawing.Size(290, 164);
             this.panel1.TabIndex = 0;
+            // 
+            // buyAmountLabel
+            // 
+            this.buyAmountLabel.AutoSize = true;
+            this.buyAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buyAmountLabel.Location = new System.Drawing.Point(86, 68);
+            this.buyAmountLabel.Name = "buyAmountLabel";
+            this.buyAmountLabel.Size = new System.Drawing.Size(59, 16);
+            this.buyAmountLabel.TabIndex = 4;
+            this.buyAmountLabel.Text = "Amount :";
+            // 
+            // buyTextBox
+            // 
+            this.buyTextBox.Location = new System.Drawing.Point(145, 67);
+            this.buyTextBox.Name = "buyTextBox";
+            this.buyTextBox.Size = new System.Drawing.Size(106, 20);
+            this.buyTextBox.TabIndex = 3;
             // 
             // buyCheckedListBox
             // 
@@ -79,23 +107,18 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.sellButton);
+            this.panel2.Controls.Add(this.sellAmountLabel);
             this.panel2.Controls.Add(this.sellCheckedListBox);
+            this.panel2.Controls.Add(this.sellTextBox);
             this.panel2.Controls.Add(this.sellLabel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(307, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(288, 213);
+            this.panel2.Size = new System.Drawing.Size(288, 164);
             this.panel2.TabIndex = 1;
-            // 
-            // sellLabel
-            // 
-            this.sellLabel.AutoSize = true;
-            this.sellLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sellLabel.Location = new System.Drawing.Point(113, 9);
-            this.sellLabel.Name = "sellLabel";
-            this.sellLabel.Size = new System.Drawing.Size(59, 29);
-            this.sellLabel.TabIndex = 0;
-            this.sellLabel.Text = "Sell";
             // 
             // sellCheckedListBox
             // 
@@ -110,29 +133,93 @@
             this.sellCheckedListBox.TabIndex = 3;
             this.sellCheckedListBox.Tag = "Ldfs";
             // 
-            // buyTextBox
+            // sellLabel
             // 
-            this.buyTextBox.Location = new System.Drawing.Point(135, 68);
-            this.buyTextBox.Name = "buyTextBox";
-            this.buyTextBox.Size = new System.Drawing.Size(106, 20);
-            this.buyTextBox.TabIndex = 3;
+            this.sellLabel.AutoSize = true;
+            this.sellLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sellLabel.Location = new System.Drawing.Point(113, 9);
+            this.sellLabel.Name = "sellLabel";
+            this.sellLabel.Size = new System.Drawing.Size(59, 29);
+            this.sellLabel.TabIndex = 0;
+            this.sellLabel.Text = "Sell";
             // 
-            // buyAmountLabel
+            // sellAmountLabel
             // 
-            this.buyAmountLabel.AutoSize = true;
-            this.buyAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buyAmountLabel.Location = new System.Drawing.Point(76, 69);
-            this.buyAmountLabel.Name = "buyAmountLabel";
-            this.buyAmountLabel.Size = new System.Drawing.Size(59, 16);
-            this.buyAmountLabel.TabIndex = 4;
-            this.buyAmountLabel.Text = "Amount :";
+            this.sellAmountLabel.AutoSize = true;
+            this.sellAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sellAmountLabel.Location = new System.Drawing.Point(91, 65);
+            this.sellAmountLabel.Name = "sellAmountLabel";
+            this.sellAmountLabel.Size = new System.Drawing.Size(59, 16);
+            this.sellAmountLabel.TabIndex = 6;
+            this.sellAmountLabel.Text = "Amount :";
+            // 
+            // sellTextBox
+            // 
+            this.sellTextBox.Location = new System.Drawing.Point(150, 64);
+            this.sellTextBox.Name = "sellTextBox";
+            this.sellTextBox.Size = new System.Drawing.Size(106, 20);
+            this.sellTextBox.TabIndex = 5;
+            // 
+            // BuyButton
+            // 
+            this.BuyButton.Location = new System.Drawing.Point(163, 93);
+            this.BuyButton.Name = "BuyButton";
+            this.BuyButton.Size = new System.Drawing.Size(75, 23);
+            this.BuyButton.TabIndex = 5;
+            this.BuyButton.Text = "Buy";
+            this.BuyButton.UseVisualStyleBackColor = true;
+            // 
+            // sellButton
+            // 
+            this.sellButton.Location = new System.Drawing.Point(166, 90);
+            this.sellButton.Name = "sellButton";
+            this.sellButton.Size = new System.Drawing.Size(75, 23);
+            this.sellButton.TabIndex = 6;
+            this.sellButton.Text = "Sell";
+            this.sellButton.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 142);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Currency now :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 142);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Currency now :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(93, 142);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "amount";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(99, 142);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "amount";
             // 
             // ExchangerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(595, 213);
+            this.ClientSize = new System.Drawing.Size(595, 164);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ExchangerForm";
@@ -155,5 +242,13 @@
         private System.Windows.Forms.CheckedListBox sellCheckedListBox;
         private System.Windows.Forms.Label buyAmountLabel;
         private System.Windows.Forms.TextBox buyTextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BuyButton;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button sellButton;
+        private System.Windows.Forms.Label sellAmountLabel;
+        private System.Windows.Forms.TextBox sellTextBox;
     }
 }
