@@ -14,9 +14,10 @@ namespace CurrencyExchanger
         [STAThread]
         static void Main()
         {
+            User user = new User();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loginForm());
+            Application.Run(new loginForm(user));
         }
     }
 }
