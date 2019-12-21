@@ -85,7 +85,6 @@
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(728, 182);
             this.listBox3.TabIndex = 6;
-            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -147,7 +146,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "HistoryForm";
             this.Text = "History";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HistoryForm_FormClosing);
             this.Load += new System.EventHandler(this.HistoryForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
