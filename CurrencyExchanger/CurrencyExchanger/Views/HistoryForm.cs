@@ -34,15 +34,5 @@ namespace CurrencyExchanger
             AdminForm adminForm = new AdminForm(user);
             adminForm.Show();
         }
-
-        private void HistoryForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-   
-        }
-
-        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
