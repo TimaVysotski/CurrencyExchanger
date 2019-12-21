@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CurrencyExchanger
@@ -13,19 +6,19 @@ namespace CurrencyExchanger
     public partial class OperationForm : Form
     {
         private User user;
+        private OperationPresenter operationPresenter;
         public OperationForm(User user)
         {
             InitializeComponent();
+            tradeSignsComboBox.SelectedIndex = 0;
+            buySignComboBox.SelectedIndex = 1;
             this.user = user;
+            operationPresenter = new OperationPresenter(this, user);
         }
-
-        private void performOperation(string opCode)
+        private void performOperation(string operation)
         {
-            // TODO: Add Convert class
-            Operation operation = new Operation(user.Username, opCode, amountTextBox.Text, "$");
-            DataBase.getInstance().WriteOperation(operation);
+            operationPresenter.performOperation(user.Username, operation, amountTextBox.Text, Convert.ToString(tradeSignsComboBox.SelectedItem), Convert.ToString(buySignComboBox.SelectedItem));   
         }
-
         private void buyButton_Click(object sender, EventArgs e)
         {
             performOperation("Buy");
@@ -33,14 +26,12 @@ namespace CurrencyExchanger
 
         private void sellButton_Click(object sender, EventArgs e)
         {
-            performOperation("Cell");
+            performOperation("Sell");
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            loginForm login = new loginForm(user);
-            login.Show();
+            operationPresenter.backToLogin();
         }
     }
 }

@@ -12,6 +12,7 @@ namespace CurrencyExchanger
         public string Operations { get; set; }
         public string Amount { get; set; }
         public string Sign { get; set; }
+        public string Date { get; set; }
 
         public Operation(string username, string operations, string amount, string sign)
         {
@@ -19,6 +20,12 @@ namespace CurrencyExchanger
             Operations = operations;
             Amount = amount;
             Sign = sign;
+            Date = Convert.ToString(DateTime.Now);
+        }
+
+        public Operation()
+        {
+      
         }
     }
 }

@@ -13,24 +13,26 @@ namespace CurrencyExchanger
 {
     public partial class HistoryForm : Form
     {
-
-        public HistoryForm()
+        private User user;
+        public HistoryForm(User user)
         {
             InitializeComponent();
+            this.user = user;
         }
 
         private void HistoryForm_Load(object sender, EventArgs e)
         {
-            foreach(string line in DataBase.getInstance().ReadOperations())
+            HistoryService historyService = new HistoryService();
+            foreach(string line in historyService.getHistoryList())
             {
                 listBox3.Items.Add(line);
             }
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*this.Hide();
-            AdminForm adminForm = new AdminForm();
-            adminForm.Show();*/
+            this.Hide();
+            AdminForm adminForm = new AdminForm(user);
+            adminForm.Show();
         }
 
         private void HistoryForm_FormClosing(object sender, FormClosingEventArgs e)

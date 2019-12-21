@@ -12,23 +12,32 @@ namespace CurrencyExchanger
 {
     public partial class AdminForm : Form
     {
-        public AdminForm()
+        private User user;
+        private AdminPresenter adminPresenter;
+        public AdminForm(User user)
         {
             InitializeComponent();
+            this.user = user;
+            adminPresenter = new AdminPresenter();
+            buyTextBox.Text = adminPresenter.getBuyMax();
+            sellTextBox.Text = adminPresenter.getSellMax();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            HistoryForm historyForm = new HistoryForm();
+            
+            HistoryForm historyForm = new HistoryForm(user);
             historyForm.Show();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           /* this.Hide();
-            loginForm loginForm = new loginForm();
-            loginForm.Show();*/
+            this.Close();
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            adminPresenter.updateMax(buyTextBox.Text, sellTextBox.Text);
         }
     }
 }
